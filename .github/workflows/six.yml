@@ -21,7 +21,7 @@ jobs:
       - run: node -p 'os.cpus()'
       - run: yarn types
       - run: yarn test:unit:ci
-      - run: yarn build
+      - run: yarn build::ci
 
       - name: Save build folder
         uses: actions/upload-artifact@v3
@@ -45,7 +45,7 @@ jobs:
       - run: node -p 'os.cpus()'
       - run: yarn types
       - run: yarn test:unit:ci
-      - run: yarn build
+      - run: yarn build:ci
 
       - name: Save build folder
         uses: actions/upload-artifact@v3
@@ -96,7 +96,7 @@ jobs:
           browser: chrome
           record: true
           parallel: true
-          tag: v6
+          tag: v6 6copy
           group: "UI - Chrome"
           spec: cypress/tests/ui/*
           config-file: cypress.json
@@ -144,7 +144,7 @@ jobs:
           browser: chrome
           record: true
           parallel: true
-          tag: v6
+          tag: v6 6copy
           group: "UI - Chrome - Mobile"
           spec: cypress/tests/ui/*
           config-file: cypress.json
@@ -190,7 +190,7 @@ jobs:
           browser: firefox
           record: true
           parallel: true
-          tag: v6
+          tag: v6 6copy
           group: "UI - Firefox"
           spec: cypress/tests/ui/*
           config-file: cypress.json
@@ -237,7 +237,7 @@ jobs:
           browser: firefox
           record: true
           parallel: true
-          tag: v6
+          tag: v6 6copy
           group: "UI - Firefox - Mobile"
           spec: cypress/tests/ui/*
           config-file: cypress.json
@@ -279,7 +279,7 @@ jobs:
           wait-on-timeout: 120
           record: true
           parallel: true
-          tag: v6
+          tag: v6 6copy
           group: "UI - Electron - Windows"
           spec: cypress/tests/ui/*
           config-file: cypress.json
